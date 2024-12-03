@@ -1,0 +1,534 @@
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(353, 93%, 50%);
+    --first-color-alt: hsl(353, 93%, 46%);
+    --first-color-dark: hsl(353, 50%, 15%);
+    --title-color: hsl(353, 48%, 12%);
+    --text-color: hsl(353, 16%, 32%);
+    --text-color-light: hsl(353, 16%, 48%);
+    --white-color: hsl(24, 86%, 90%);
+    --body-color: hsl(24, 86%, 88%);
+    --container-color: hsl(24, 86%, 92%);
+    --shadow-small-img: drop-shadow(0 4px 16px hsla(353, 100%, 8%, .2));
+    --shadow-big-img: drop-shadow(0 8px 24px hsla(353, 100%, 8%, .2));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hmtl,body{
+    height: 100%;
+    width: 100%;
+    font-family: "Carter One", serif;
+    text-transform: capitalize;
+    background-color: var(--body-color);
+    
+}
+
+.display{
+    display:none;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+/* ================ NAVBAR =========================== */
+
+.navbar-main{
+    display: flex;
+    align-items: center;
+    background-color:var(--body-color) ;
+    justify-content: space-between;
+    padding: 0.4rem 0.5rem;
+}
+
+
+
+.navbar-1{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+}
+
+.navbar-1 h2{
+    color: var(--title-color);
+}
+
+/* ================= NAVBAR-CLOSED ============================== */
+
+/* ===================== HERO-SECTION ============================== */
+.hero-main{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+    row-gap: 2rem;
+    background-color: var(--body-color);
+    position: relative;
+  
+}
+
+
+.hero-child-1{
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    row-gap: 1rem; */
+}
+
+.hero-child-1 p{
+    font-family: sans-serif;
+    color: var(--text-color-light);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+
+
+#button-hero{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--first-color);
+    color: white;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    box-shadow: 0px 8px 24px hsla(353,100%,40%,.4);
+    width: fit-content;
+}
+
+
+
+.hero-child-2 {
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+}
+
+#board {
+    max-width: 600px; 
+    width: 100%; 
+    height: auto; 
+    max-height: 600px;
+    /* position:absolute; */
+}
+
+#pizza {
+    position: absolute; 
+    width: 90%; 
+    max-width: 500px; 
+    height: auto; 
+    top: 27%; 
+    left: 5%; 
+    transform: translate(-50%, -50%); 
+}
+
+.home-images{
+    position: absolute;
+    width: 15%;
+}
+
+.one{
+    top: 20%;
+    left: 40%;
+}
+
+.two{
+    top: 78%;
+    left: 14%;
+}
+
+.three{
+    top: 67%;
+    left: 81%;
+}
+
+.four{
+    top: 84%;
+    left: 48%;
+}
+
+.five{
+    top: 35%;
+    left: 5%;
+}
+
+.six{
+    top: 35%;
+    left: 77%;
+}
+
+.hero-child-1 h2{
+    color: var(--title-color);
+}
+
+
+/* ========================== ANIMATIONS ================================= */
+@keyframes slideInFromleft{
+    from {
+        transform: translateX(100%); /* Start from 30 pixels above */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+@keyframes slideinfromright{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-child-2 img{
+    
+   /* position: absolute; */
+}
+
+#board{
+    
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0;
+}
+
+#pizza{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.2s;
+}
+
+.one{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.4s;
+}
+
+.two{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.three{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.6s;
+}
+
+
+.four{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.7s;
+}
+
+.five{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.8s;
+}
+
+.six{
+    opacity: 0;
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.9s;
+}
+
+/* .home-images{
+   
+    animation: slideInFromleft 1s forwards;
+    animation-delay: 0.4s;
+} */
+
+.hero-child-1 {
+    
+    /* Add the animation */
+    animation-delay: 0s; /* Optional delay before the animation starts */
+}
+
+.hero-child-1 h2{
+    opacity: 0;
+    animation: slideinfromright 1s forwards;
+    animation-delay: 0.1s;
+}
+
+.hero-child-1 p{
+    opacity: 0;
+    animation: slideinfromright 1s forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-child-1 button{
+    opacity: 0;
+    animation: slideinfromright 1s forwards;
+    animation-delay: 0.3s;
+}
+
+
+/* ================== ANIMATION -CLOSED ============================ */
+
+/* ====================== ABOUT-SECTION ================================ */
+.about-main-og{
+    width: 100%;
+    background-color: var(--white-color);
+}
+.about-main{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--white-color);
+    margin: 1rem 0.5rem;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.about-child-1 img{
+    width: 100%;
+    max-width: 500px;
+    margin: 0.5rem auto;
+}
+
+.about-child-2{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-child-2 p{
+    font-family: sans-serif;
+    color: var(--text-color-light);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.about-child-2 h2{
+    color: var(--title-color);
+}
+
+#sticker-cheese{
+    position: absolute;
+    width: 15%;
+    top: 60%;
+    left: 45%;
+    transform: rotate(20deg);
+}
+
+
+#sticker-pizza{
+    position: absolute;
+    opacity: 0.8;
+    width:15%;
+    top: 67%;
+    left: 64%;
+    transform: rotate(35deg);
+}
+
+
+#sticker-leaf{
+    position: absolute;
+    opacity: 0.8;
+    width: 15%;
+    top: 14%;
+    left: 36%;
+
+}
+
+/* =================== ABOUT-SECTION-CLOSED ======================================= */
+
+/* ====================== POPULAR-SECTION ============================================= */
+
+.popular-main{
+    text-align: center;
+    margin: 1rem 0.5rem;
+}
+
+.popular-main h2{
+    color: var(--title-color);
+
+}
+
+.popular-main p{
+    font-family: sans-serif;
+    color: var(--text-color-light);
+}
+
+.popular-child-1{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 2.5rem auto;
+}
+
+.popular-chips{
+    width: 32%;
+}
+
+.middle{
+    transform: scale3d(1.3,1.3,1.3);
+}
+
+
+
+/* ===================== RESPONSIVE TYPOGRAPHY ====================== */
+
+@media (min-width:725px) {
+    .display{
+        display: flex;
+    }
+
+    .navbar-main{
+        padding: 0.8rem 2rem;
+    }
+
+    .navbar-anchors{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: var(--title-color);
+    }
+
+    .navbar-anchors h3:hover{
+          text-decoration:underline var(--first-color) solid 2px;
+    }
+
+    .material-symbols-outlined{
+        display:none;
+    }
+
+    /* =================== navbar-closed ====================== */
+
+    
+  .hero-main{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem 2rem;
+    }
+
+    .hero-child-1{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        justify-content: center;
+    }
+
+    .hero-child-1 h2{
+        font-size: 3rem;
+    }
+
+    .hero-child-1 p{
+        width: 80%;
+        font-size: 1.25rem;
+    }
+
+    #button-hero{
+        font-size: 1.05rem;
+        width: fit-content;
+        padding: 0.8rem 1.5rem;
+    }
+
+
+    .hero-child-2 {
+        position: relative; /* Ensure this is set for absolute positioning of children */
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* ================ ABOUT-SECTION ==================== */
+
+    .about-main{
+        flex-direction: row;
+        margin: 4rem 2rem;
+        justify-content: space-between;
+        column-gap: 12rem;
+    }
+
+    .about-child-2{
+        text-align: start;
+        width: 60%;
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-child-2 h2{
+        font-size: 3rem;
+    }
+
+    .about-child-2 p{
+        /* width: 60%; */
+        font-size: 1.25rem;
+    }
+
+    #sticker-cheese{
+        width: 5%;
+        
+        opacity: 0.8;
+    }
+
+    #sticker-pizza{
+        position: absolute;
+        opacity: 0.8;
+        width:5%;
+    }
+
+    #sticker-leaf{
+        position: absolute;
+        opacity: 0.8;
+        width: 5%;
+    }
+
+    /* ================================== POULAR-SECTION ======================================== */
+
+    .popular-chips{
+        width: 25%;
+    }
+
+    .popular-main h2{
+        font-size: 2.5rem;
+    }
+
+    .popular-main p{
+        font-size: 1.25rem;
+    }
+
+    .popular-child-1{
+        column-gap: 6rem;
+        margin: 6rem auto;
+    }
+    
+    
+    
+}
+
+@media (min-width:1024px){
+
+}
+
+@media (min-width:1440px){
+
+}
