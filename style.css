@@ -201,6 +201,16 @@ hmtl,body{
     }
 }
 
+@keyframes fadein{
+    from{
+        opactiy:0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 .hero-child-2 img{
     
    /* position: absolute; */
@@ -216,24 +226,28 @@ hmtl,body{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.2s;
+    /* animation: fadein 1s forwards; */
 }
 
 .one{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.4s;
+    /* animation: fadein 1s forwards; */
 }
 
 .two{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.5s;
+    /* animation: fadein 1s forwards; */
 }
 
 .three{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.6s;
+    /* animation: fadein 1s forwards; */
 }
 
 
@@ -241,19 +255,23 @@ hmtl,body{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.7s;
+    /* animation: fadein 1s forwards; */
 }
 
 .five{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.8s;
+    /* animation: fadein 1s forwards; */
 }
 
 .six{
     opacity: 0;
     animation: slideInFromleft 1s forwards;
     animation-delay: 0.9s;
+    /* animation: fadein 1d forwards; */
 }
+
 
 /* .home-images{
    
@@ -390,6 +408,193 @@ hmtl,body{
     transform: scale3d(1.3,1.3,1.3);
 }
 
+/* ================= POPULAR-SECTION-CLOSED ============================== */
+
+/* ========================= IG-SECTION ======================================== */
+
+.ig-color{
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.ig-color h2{
+    padding-top: 1.5rem;
+    color: var(--title-color);
+}
+.ig-main{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--white-color);
+    margin: 1.5rem 0.5rem;
+    row-gap: 1.5rem;
+
+}
+
+.ig-child-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ig-box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: start;
+}
+
+.ig-box-1 h3{
+    color: var(--title-color);
+}
+
+.ig-box-1 p{
+    font-family: sans-serif;
+    color: var(--text-color-light);
+
+}
+
+#recipe{
+    width: 100%;
+    max-width: 150px;
+}
+
+#recipe-img{
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ======================= IG-SECTION-CLOSED ================================= */
+
+/* ========================== PRODUCT-SECTION ==================================== */
+
+.product-main{
+    text-align: center;
+}
+
+.product-main h2{
+    margin-bottom: 4rem;
+}
+
+.product-main h2{
+    color: var(--title-color);
+}
+
+.product-m{
+    text-align: start;
+}
+
+.product-box{
+    background-color: var(--white-color);
+    border-radius: 25px;
+    padding: 1rem;
+    position: relative;
+    box-shadow:1px 3px 10px 0px hsl(24deg 42.44% 77.29%);;
+}
+
+.product-box span{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-box span h3{
+    color: var(--first-color);
+}
+
+#product-img{
+   
+    position: absolute;
+    width: 50%;
+    top: -16%;
+    left: 25%;
+    transition:transform 0.3s ease-in-out 0s ;
+    filter: var(--shadow-small-img);
+}
+
+#product-img:hover{
+    transform: translatey(-5px);
+}
+
+.product-child-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 1.5rem;
+    margin:1rem 0.5rem;
+}
+
+.product-m{
+    margin-top: 2rem;
+}
+
+.product-m h3{
+    margin-bottom: 1rem;
+}
+
+
+/* ================================ PRODUCT-CLOSED ========================================== */
+
+/* =================================== CONTACT-SECTION ========================================== */
+
+.contact-box{
+    background-color: var(--first-color);
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--first-color-dark);
+    max-width: 1000px;
+    border-radius: 30px;
+    margin: 2rem 0.5rem;
+    text-align: center;
+    color: white;
+    row-gap: 1.5rem;
+    position: relative;
+
+}
+
+.contact-child-2 h2{
+    margin-top: 1rem;
+}
+
+.contact-child-21{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    row-gap: 1.5rem;
+
+}
+#contact-img{
+    width: 100%;
+    max-width: 300px;
+}
+.ct2 p{
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+    font-weight: 700;
+}
+
+.contact-child-22 p{
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+#onion{
+    position: absolute;
+    width:10%;
+    top: 74%;
+    left: 6%;
+    color: grey;
+}
+
+
+#mushroom{
+    position: absolute;
+    width:10%;
+    top: 27%;
+    left: 14%;
+}
+
+
+
 
 
 /* ===================== RESPONSIVE TYPOGRAPHY ====================== */
@@ -520,15 +725,102 @@ hmtl,body{
         column-gap: 6rem;
         margin: 6rem auto;
     }
+
+/* ==================== POPULAR-SECTION-CLOSED ======================================= */
+
+/* ======================= IG-SECTION =================================================== */
+
+.ig-main{
+    flex-direction: row-reverse;
+    margin: 3rem 2rem;
+    justify-content: space-between;
+    column-gap: 2rem;
+    
+
+}
+
+.ig-color h2{
+    font-size: 2.5rem;
+}
+
+#recipe{
+    max-width: 100px;
+}
+
+#recipe-img{
+    max-width: 500px;
+}
+
+/* ================================= PRODUCT-SECTION ======================================== */
+
+.product-child-1{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8rem 2rem;
+}
+
+.product-child-1{
+    margin: 3rem 2rem;
+}
+.product-m{
+    margin-top: 6rem;
+}
+
+.product-main h2{
+    margin-bottom: 8rem;
+    font-size: 2rem;
+}
+
+/* ======================== PRODUCT-CLOSED ============================ */
+
+/* =========================== CONTACT-SECTION ============================= */
+
+.contact-box{
+    flex-direction: row;
+    justify-content: space-between;
+    padding:2rem 4rem;
+    padding-bottom: 0rem;
+    text-align: start;
+    margin: 3rem auto;
+    align-items: center;
+    
+}
+
+
+
+.contact-child-21{
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+#mushroom{
+    width: 5%;
+}
+#onion{
+    width: 5%;
+}
+
+
+
+
+
     
     
     
 }
 
 @media (min-width:1024px){
+    .product-m{
+        margin-top: 8rem;
+    }
 
 }
 
 @media (min-width:1440px){
 
+}
+
+@media (min-width:2560px){
+    .product-m{
+        margin-top: 12rem;
+    }
 }
