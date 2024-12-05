@@ -522,7 +522,7 @@ hmtl,body{
 }
 
 .product-m{
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .product-m h3{
@@ -782,6 +782,7 @@ hmtl,body{
     text-align: start;
     margin: 3rem auto;
     align-items: center;
+    width: calc(100% - 4rem);
     
 }
 
